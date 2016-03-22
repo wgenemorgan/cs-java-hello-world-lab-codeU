@@ -4,12 +4,13 @@ public class HelloWorld {
     public static Double getVersion() {
         // I won't work!
 	String v = System.getProperty("java.specification.version");
-	return Double.parseDouble(v);
+	System.out.println("HelloWorld: " + v);
+	return 9.9;
     }
 
     public static void main(String[] args) {
 	    // you can test the output of getVersion() here
-	Double x = getVersion();
+	Double x = HelloWorld::getVersion();
 	System.out.println("main: " + x);
     }
 }
